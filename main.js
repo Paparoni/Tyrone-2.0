@@ -77,4 +77,4 @@ Tyrone.on('message', message => {
     }
 });
 // Connect To Discord
-Tyrone.login('MzAwODczNTk0OTYyMDUxMDcz.DIsdJQ.2ej7N51Y1rCuLGFhyXC00-W41yc');
+Tyrone.login('UR TOKEN');
