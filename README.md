@@ -27,3 +27,8 @@ npm install
 npm start
 ```
 + Boom you're hosting tyrone
+
+## To stop Tyrone simply run the command
+```
+npm run kill
+```
