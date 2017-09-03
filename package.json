@@ -13,7 +13,8 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "pm2 start main.js --name \"Tyrone Discord bot\""
+    "start": "pm2 start main.js --name \"Tyrone Discord bot\"",
+    "kill": "pm2 kill"
   },
   "repository": {
     "type": "git",
