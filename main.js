@@ -24,14 +24,13 @@ TyroneAI.loadDirectory("AI", loading_complete, load_error);
 function loading_complete(batch_num) {
 
     TyroneAI.sortReplies();
-    Tyrone.on('message', message => {
-        if (message.isMentioned(Tyrone.user) == true) {
-            var getreply = TyroneAI.reply("local-user", message.content.toLowerCase());
-            message.reply(getreply);
-        }
-    });
+Tyrone.on('message', message => {
+    if (message.isMentioned(Tyrone.user) == true){
+        var getreply = TyroneAI.reply("local-user", message.content.toLowerCase().replace(Tyrone.user.toString(), ""));
+        message.reply(getreply);
+    }
+});
 }
-
 function load_error(error) {
     console.log("Error when loading files: " + error);
 }
@@ -47,31 +46,31 @@ Tyrone.on('message', message => {
         var command = message.content.split("$").pop().split(' ').shift();
         // gets the user input after the command or gets all the text after the first space.
         var commanddata = message.content.substring(message.content.indexOf(" ") + 1);
-        // find out witch command is being used and write the code for it
+// find out witch command is being used and write the code for it
         switch (command) {
-            // begin define command
+        // begin define command
             case 'define':
-                var word = commanddata;
-                getJSON("http://api.urbandictionary.com/v0/define?term=" + word, function(error, c) {
-                    if (error) {
-                        throw Error(error);
+            var word = commanddata;
+            getJSON("http://api.urbandictionary.com/v0/define?term=" + word, function(error, c) {
+                if (error) {
+                  throw Error(error);
+                  
+                } else {
+                  if(c.list[0] == undefined){
+                    message.reply("nigga stfu that don't mean shit.");
+                  } else {
+                    var getword = c.list[0].word,
+                        word = getword.charAt(0).toUpperCase() + getword.substring(1),
+                        definition = c.list[0].definition,
+                        out = "" + word + ": " + definition;
+                    
+                    message.reply(out);
+                  }
 
-                    } else {
-                        if (c.list[0] == undefined) {
-                            message.reply("nigga stfu that don't mean shit.");
-                        } else {
-                            var getword = c.list[0].word,
-                                word = getword.charAt(0).toUpperCase() + getword.substring(1),
-                                definition = c.list[0].definition,
-                                out = "" + word + ": " + definition;
-
-                            message.reply(out);
-                        }
-
-                    }
-                });
+                }
+            });
                 break;
-                // if the command isn't listed above return this message 
+           // if the command isn't listed above return this message 
             default:
                 message.reply("That command doesn't exist retard")
         }
