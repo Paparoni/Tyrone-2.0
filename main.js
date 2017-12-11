@@ -99,4 +99,4 @@ Tyrone.on('message', message => {
     }
 });
 // Connect To Discord
-Tyrone.login('INSERT YOUR TOKEN');
+Tyrone.login('OD5aEq6zudOkFvpyQ0mp9-a_DijAfe24');
