@@ -34,7 +34,7 @@ function loading_complete(batch_num) {
 }
 
 function load_error(error) {
-    console.log("Error when loading files: " + error);
+    console.log(" Error when loading files: " + error);
 }
 
 Tyrone.on('message', message => {
