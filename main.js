@@ -120,7 +120,7 @@ Tyrone.on('message', message => {
                         };
                         TwitterClient.get('statuses/user_timeline', params, function(error, tweets, response) {
                                 if (!error) {
-                                    message.channel.send(commanddata +"'s latest tweet says: \"" + tweets[0].text + "\" \n with " + tweets[0].favorite_count + " likes and " + tweets[0].retweet_count + " retweets");
+                                    message.channel.send(commanddata +"'s latest tweet says: \"" + tweets[0].text + "\" with " + tweets[0].favorite_count + " likes and " + tweets[0].retweet_count + " retweets.");
                                     }
                                     else {
                                         message.reply("I'm sorry, what?")
