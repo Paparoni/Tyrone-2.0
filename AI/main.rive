@@ -601,8 +601,8 @@
 - Should you <star> yourself?
 - You want me to <star>?
 
-+ jope
-- My IP address is: <call>jokeobj</call>
++ [*] a joke [*]
+- <call>jokeobj</call>
 
 + why can not i *
 - Do you think you should be able to <star>?
