@@ -1,4 +1,4 @@
-# Tyrone 2.0
+# Tyrone 2.0 [![Build Status](https://travis-ci.org/Heark/Tyrone-2.0.svg?branch=master)](https://travis-ci.org/Heark/Tyrone-2.0)
 Tyrone is a friendly discord bot with automated replies
 Add him to your server [HERE](https://discordapp.com/oauth2/authorize?&client_id=300873594962051073&scope=bot)
 
