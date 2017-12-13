@@ -1,4 +1,4 @@
-var styles = [
+global.styles = [
     'background: linear-gradient(#D33106, #571402)'
     , 'border: 1px solid #3E0E02'
     , 'color: white'
