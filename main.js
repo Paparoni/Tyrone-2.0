@@ -92,6 +92,9 @@ Tyrone.on('message', message => {
                 message.channel.send(insulteename + " " + insults[Math.floor(Math.random() * insults.length)]);
 
                 break;
+            case 'test':
+                message.channel.send("test");
+                break;
                 // if the command isn't listed above return this message 
             default:
                 message.reply("That command doesn't exist retard");
