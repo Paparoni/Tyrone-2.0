@@ -17,7 +17,7 @@ Tyrone.on('ready', () => {
     // Convert milliseconds to seconds for readibility.
     load_time = currentMillisecondsPassed / 1000;
     // Print to the console when the bot has been loaded.
-    console.log('\x1b[32m%s\x1b[0m', 'Tyrone Online! Connected in ' + load_time + ' seconds.');
+    console.log('\x1b[32m%s\x1b[0m', 'Tyrone Online! Connected in ' + load_time + ' seconds. v1.0');
 
 });
 TyroneAI.loadDirectory("AI", loading_complete, load_error);
@@ -102,4 +102,4 @@ Tyrone.on('message', message => {
     }
 });
 // Connect To Discord
-Tyrone.login('MzAwODczNTk0OTYyMDUxMDcz.DRJztQ.cDOILgEbdqae3YGdz1kr1uL5TFI');
+Tyrone.login('MzAwODczNTk0OTYyMDUxMDcz.DRJ1qQ.alcoIqu19idpANf8dYZVEeapQsg');
