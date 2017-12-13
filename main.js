@@ -1,16 +1,19 @@
+// Discord.js bot
+const Discord = require('discord.js');
+const Tyrone = new Discord.Client();
 // See how long it takes Tyrone to come online. Timer
 var loading = new Date().getTime();
 var load_time;
 
 // Define Constants
 require("./insults.js");
-const Discord = require('discord.js');
-const Tyrone = new Discord.Client();
+
 // Perform a GET request for a JSON api
 const getJSON = require('get-json');
 
 const RiveScript = require("rivescript");
 const TyroneAI = new RiveScript();
+
 
 Tyrone.on('ready', () => {
     var currentMillisecondsPassed = new Date().getTime() - loading;
@@ -20,6 +23,7 @@ Tyrone.on('ready', () => {
     console.log('\x1b[32m%s\x1b[0m', 'Tyrone Online! Connected in ' + load_time + ' seconds. v1.0');
 
 });
+
 TyroneAI.loadDirectory("AI", loading_complete, load_error);
 
 function loading_complete(batch_num) {
@@ -101,5 +105,36 @@ Tyrone.on('message', message => {
         }
     }
 });
-// Connect To Discord
-Tyrone.login('MzAwODczNTk0OTYyMDUxMDcz.DRJ1qQ.alcoIqu19idpANf8dYZVEeapQsg');
+
+Tyrone.login(process.env.TOKEN);
+
+// Web app (Express + EJS)
+const http = require('http');
+const express = require('express');
+const app = express();
+
+// set the port of our application
+// process.env.PORT lets the port be set by Heroku
+const port = process.env.PORT || 5000;
+
+// set the view engine to ejs
+app.set('view engine', 'ejs');
+
+// make express look in the `public` directory for assets (css/js/img)
+app.use(express.static(__dirname + '/public'));
+
+// set the home page route
+app.get('/', (request, response) => {
+    // ejs render automatically looks in the views folder
+    response.render('index');
+});
+
+app.listen(port, () => {
+    // will echo 'Our app is running on http://localhost:5000 when run locally'
+    console.log('Our app is running on http://localhost:' + port);
+});
+
+// pings server every 15 minutes to prevent dynos from sleeping
+setInterval(() => {
+ http.get('http://discordjs-heroku.herokuapp.com');
+}, 900000);
