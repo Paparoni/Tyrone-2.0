@@ -7,7 +7,7 @@ var load_time;
 
 // Define Constants
 require("./insults.js");
-
+require("./styles.js");
 // Perform a GET request for a JSON api
 const getJSON = require('get-json');
 
