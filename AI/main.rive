@@ -601,6 +601,9 @@
 - Should you <star> yourself?
 - You want me to <star>?
 
++ [*] joke {*]
+* My IP address is: <call>joke</call>
+
 + why can not i *
 - Do you think you should be able to <star>?
 - Do you want to be able to <star>?
@@ -625,3 +628,9 @@
 - Does this topic make you feel angry?
 - Is something making you feel angry?
 - Does using that kind of language make you feel better?
+
+> object joke javascript
+var oneLinerJoke = require("one-liner-joke")
+var Joke = oneLinerJoke.getRandomJoke();
+return Joke.body;
+< object
