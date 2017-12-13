@@ -602,7 +602,7 @@
 - You want me to <star>?
 
 + [*] joke {*]
-* My IP address is: <call>joke</call>
+- My IP address is: <call>joke</call>
 
 + why can not i *
 - Do you think you should be able to <star>?
