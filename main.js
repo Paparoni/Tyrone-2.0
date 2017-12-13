@@ -55,7 +55,7 @@ Tyrone.on('message', message => {
         // gets the command used name. For example if the user types $hi this variable will contain "hi"
         var command = message.content.split("$").pop().split(' ').shift();
         // gets the user input after the command
-        var commandinit = message.content.toLowerCase().replace("$"+command, "").split("/", 2);
+        var commandinit = message.content.toLowerCase().replace("$"+command, "").split(" / ", 2);
         var commanddata = commandinit[0];
         var commanddata2 = commandinit[1];
         // find out witch command is being used and write the code for it
