@@ -134,5 +134,5 @@ app.listen(port, () => {
 });
 
 setInterval(() => {
- http.get('http://discordjs-heroku.herokuapp.com');
+ http.get('https://tyroneload.herokuapp.com');
 }, 900000);
