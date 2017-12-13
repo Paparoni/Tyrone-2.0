@@ -8,6 +8,7 @@ var load_time;
 // Define Constants
 require("./insults.js");
 require("./styles.js");
+
 // Perform a GET request for a JSON api
 const getJSON = require('get-json');
 
@@ -28,7 +29,7 @@ Tyrone.on('ready', () => {
     // Convert milliseconds to seconds for readibility.
     load_time = currentMillisecondsPassed / 1000;
     // Print to the console when the bot has been loaded.
-    console.log('\x1b[32m%s\x1b[0m', 'Tyrone Online! Connected in ' + load_time + ' seconds. v1.0');
+    console.log('%c Tyrone Online! Connected in ' + load_time + ' seconds. v1.0', styles);
 
 });
 
