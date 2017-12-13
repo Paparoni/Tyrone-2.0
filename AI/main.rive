@@ -604,6 +604,9 @@
 + [*] a joke [*]
 - <call>jokeobj</call>
 
++ a [*] joke [*]
+- <call>jokeobj</call>
+
 + why can not i *
 - Do you think you should be able to <star>?
 - Do you want to be able to <star>?
