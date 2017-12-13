@@ -135,4 +135,5 @@ app.listen(port, () => {
 
 setInterval(() => {
  http.get('https://tyroneload.herokuapp.com');
+ console.log("Server pinged");
 }, 900000);
