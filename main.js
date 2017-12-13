@@ -1,4 +1,4 @@
-// Discord.js bot
+// Tyrone by Aj
 const Discord = require('discord.js');
 const Tyrone = new Discord.Client();
 // See how long it takes Tyrone to come online. Timer
@@ -103,7 +103,7 @@ Tyrone.on('message', message => {
 
                 break;
             case 'test':
-                message.channel.send("test");
+                message.channel.send("test command data 1: "+commanddata+" command data 2: "+commanddata2);
                 break;
                 // if the command isn't listed above return this message 
             default:
@@ -130,7 +130,7 @@ app.get('/', (request, response) => {
 });
 
 app.listen(port, () => {
-    console.log('Our app is running on http://localhost:' + port);
+    console.log('Tyrone is running on http://localhost:' + port);
 });
 
 setInterval(() => {
