@@ -139,7 +139,7 @@ Tyrone.on('message', message => {
                 }
                 break;
             case 'leave':
-
+                Tyrone.voiceChannel.leave();
                 break;
             case 'soundboard':
                 var sound_name = commanddata;
