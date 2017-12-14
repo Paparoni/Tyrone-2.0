@@ -143,6 +143,7 @@ Tyrone.on('message', message => {
                 break;
             case 'soundboard':
                 var sound_name = commanddata;
+                console.log(sound_name);
                 switch (sound_name) {
 
                     case 'bruh':
