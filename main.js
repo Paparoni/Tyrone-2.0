@@ -64,7 +64,7 @@ Tyrone.on('message', message => {
         // gets the command used name. For example if the user types $hi this variable will contain "hi"
         var command = message.content.split("$").pop().split(' ').shift();
         // gets the user input after the command
-        var commandinit = message.content.toLowerCase().replace("$" + command +" ", "").split(" / ", 2);
+        var commandinit = message.content.toLowerCase().replace("$" + command + " ", "").split(" / ", 2);
         var commanddata = commandinit[0];
         var commanddata2 = commandinit[1];
         // find out witch command is being used and write the code for it
@@ -143,22 +143,46 @@ Tyrone.on('message', message => {
                 break;
             case 'soundboard':
                 var sound_name = commanddata;
+                var soundFile;
                 console.log(sound_name.length);
                 switch (sound_name) {
 
                     case 'bruh':
-                        message.member.voiceChannel.join()
-                        .then(connection => {
-                            const dispatcher = connection.playArbitraryInput('https://sound.peal.io/ps/audios/000/000/269/original/bruh?1469744327')
-                        })
-                        .catch(console.log);
+                        soundFile = 'https://sound.peal.io/ps/audios/000/000/269/original/bruh?1469744327'
                         break;
+                    case 'skinnypenis':
+                        soundFile = 'https://sound.peal.io/ps/audios/000/002/147/original/youtube.mp3?1493768525'
+                        break;
+                    case 'crackkid':
+                        soundFile = 'https://sound.peal.io/ps/audios/000/000/271/original/crack_kid?1469744465'
+                        break;
+                    case 'apotato':
+                        soundFile = 'https://sound.peal.io/ps/audios/000/000/262/original/a_potato_flew_around_my_room?1469744409'
+                        break;
+                    case 'aladdin':
+                        soundFile = 'https://sound.peal.io/ps/audios/000/000/009/original/show-the-world.wav?1469744355'
+                        break;
+                    case 'deeznuts':
+                        soundFile = 'https://sound.peal.io/ps/audios/000/000/385/original/deeznuts.wav?1469744459'
+                        break;
+                    case 'cantbelieve'
+                    soundFile = 'https://sound.peal.io/ps/audios/000/005/317/original/youtube.mp3?1511269037'
+                    break;
+                    case 'hellnaw'
+                    soundFile = 'https://sound.peal.io/ps/audios/000/000/375/original/When_your_ex_texts_34__Do_you_miss_me_34_.mp3?1469744407'
+                    break;
+                    case 'iwannadie'
+                    soundFile = 'https://sound.peal.io/ps/audios/000/000/713/original/If_I_were_to_die.mp3?1469744405'
+                    break;
 
                     default:
                         message.reply('Tf is that?');
-
-
                 }
+                message.member.voiceChannel.join()
+                    .then(connection => {
+                        const dispatcher = connection.playArbitraryInput(soundFile);
+                    })
+                    .catch(console.log);
                 break;
 
                 // if the command isn't listed above return this message 
