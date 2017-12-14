@@ -147,7 +147,11 @@ Tyrone.on('message', message => {
                 switch (sound_name) {
 
                     case 'bruh':
-                        const dispatcher = connection.playArbitraryInput('https://sound.peal.io/ps/audios/000/000/269/original/bruh?1469744327')
+                        message.member.voiceChannel.join()
+                        .then(connection => {
+                            const dispatcher = connection.playArbitraryInput('https://sound.peal.io/ps/audios/000/000/269/original/bruh?1469744327')
+                        })
+                        .catch(console.log);
                         break;
 
                     default:
