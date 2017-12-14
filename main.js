@@ -165,15 +165,15 @@ Tyrone.on('message', message => {
                     case 'deeznuts':
                         soundFile = 'https://sound.peal.io/ps/audios/000/000/385/original/deeznuts.wav?1469744459'
                         break;
-                    case 'cantbelieve'
-                    soundFile = 'https://sound.peal.io/ps/audios/000/005/317/original/youtube.mp3?1511269037'
-                    break;
-                    case 'hellnaw'
-                    soundFile = 'https://sound.peal.io/ps/audios/000/000/375/original/When_your_ex_texts_34__Do_you_miss_me_34_.mp3?1469744407'
-                    break;
-                    case 'iwannadie'
-                    soundFile = 'https://sound.peal.io/ps/audios/000/000/713/original/If_I_were_to_die.mp3?1469744405'
-                    break;
+                    case 'cantbelieve':
+                        soundFile = 'https://sound.peal.io/ps/audios/000/005/317/original/youtube.mp3?1511269037'
+                        break;
+                    case 'hellnaw':
+                        soundFile = 'https://sound.peal.io/ps/audios/000/000/375/original/When_your_ex_texts_34__Do_you_miss_me_34_.mp3?1469744407'
+                        break;
+                    case 'iwannadie':
+                        soundFile = 'https://sound.peal.io/ps/audios/000/000/713/original/If_I_were_to_die.mp3?1469744405'
+                        break;
 
                     default:
                         message.reply('Tf is that?');
