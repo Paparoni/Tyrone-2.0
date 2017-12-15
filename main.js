@@ -175,7 +175,7 @@ Tyrone.on('message', message => {
                     case 'hellnaw':
                         soundFile = 'https://sound.peal.io/ps/audios/000/000/375/original/When_your_ex_texts_34__Do_you_miss_me_34_.mp3?1469744407'
                         break;
-                    case 'iwannadie':'
+                    case 'iwannadie':
                         soundFile = 'https://sound.peal.io/ps/audios/000/000/713/original/If_I_were_to_die.mp3?1469744405'
                         break;
                     case 'beakfast':
