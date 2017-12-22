@@ -181,6 +181,15 @@ Tyrone.on('message', message => {
                     case 'beakfast':
                         soundFile = 'https://sound.peal.io/ps/audios/000/001/342/original/youtube.mp3?1485216239';
                         break;
+                    case 'jamaican':
+                        soundFile = 'https://sound.peal.io/ps/audios/000/006/352/original/youtube.mp3?1513925197'
+                        break;
+                    case 'churchgirl':
+                        soundFile = 'https://sound.peal.io/ps/audios/000/006/353/original/youtube.mp3?1513925346'
+                        break;
+                    case 'dudewtf':
+                        soundFile = 'https://sound.peal.io/ps/audios/000/006/354/original/youtube.mp3?1513925423'
+                        break;
                     case 'kamehameha':
                         soundFile = 'https://sound.peal.io/ps/audios/000/000/027/original/kamehameha.wav?1469744249'
                         break;
