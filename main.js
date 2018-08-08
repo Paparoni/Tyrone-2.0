@@ -237,11 +237,11 @@ app.use(express.static(__dirname + '/public'));
 app.get('/', (request, response) => {
     response.render('index');
 });
-
+/* @BREAK
 app.listen(port, () => {
     console.log('Tyrone is running on http://localhost:' + port);
 });
-
+*/
 setInterval(() => {
     http.get('https://tyroneload.herokuapp.com');
     console.log("Server pinged");
