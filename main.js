@@ -1,10 +1,20 @@
 // Tyrone by Aj
+// See how long it takes Tyrone to come online. Timer
+var loading = new Date().getTime(),
+    load_time;
+
+
+// create a spawn child process to run python script
+const spawn = require("child_process").spawn;
+
+const pythonSetup = spawn('python',["Python/setup.py"]);
+
+pythonSetup.stdout.on('data', (data) => {
+    console.log(data)
+});
+
 const Discord = require('discord.js');
 const Tyrone = new Discord.Client();
-// See how long it takes Tyrone to come online. Timer
-var loading = new Date().getTime();
-var load_time;
-
 // Define Constants
 const insults = require("./insults.js").insults;
 const styles = require("./styles.js").styles;
@@ -15,14 +25,6 @@ const getJSON = require('get-json');
 const RiveScript = require("rivescript");
 const TyroneAI = new RiveScript();
 
-// create a spawn child process to run python script
-const spawn = require("child_process").spawn;
-
-const pythonSetup = spawn('python',["Python/setup.py"]);
-
-pythonSetup.stdout.on('data', (data) => {
-    console.log(data)
-});
 
 var Twitter = require('twitter');
 
