@@ -1,4 +1,4 @@
-global.styles = [
+styles = [
     'background: linear-gradient(#D33106, #571402)'
     , 'border: 1px solid #3E0E02'
     , 'color: white'
@@ -9,3 +9,7 @@ global.styles = [
     , 'text-align: center'
     , 'font-weight: bold'
 ].join(';');
+
+module.exports = {
+    styles: styles
+}
