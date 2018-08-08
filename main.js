@@ -6,14 +6,23 @@ var loading = new Date().getTime();
 var load_time;
 
 // Define Constants
-require("./insults.js");
-require("./styles.js");
+const insults = require("./insults.js").insults;
+const styles = require("./styles.js").styles;
 
 // Perform a GET request for a JSON api
 const getJSON = require('get-json');
 
 const RiveScript = require("rivescript");
 const TyroneAI = new RiveScript();
+
+// create a spawn child process to run python script
+const spawn = require("child_process").spawn;
+
+const pythonSetup = spawn('python',["Python/setup.py"]);
+
+pythonSetup.stdout.on('data', (data) => {
+    console.log(data)
+});
 
 var Twitter = require('twitter');
 
